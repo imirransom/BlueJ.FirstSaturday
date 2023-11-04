@@ -17,16 +17,17 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
+        while( w < 6) {
             w = w + 1;
             // each time through the loop
-
+        }
         // this will tell the test how many times the loop executed.
         return w;
     }
 
     public int oneToTen() {
         int w = 0;
-
+        while (w < 11)
         // Write a FOR loop that counts from 1 to 10.
         // calling
         w = w + 1;
@@ -36,8 +37,8 @@ public class WriteLoops {
     }
 
     public int startAtTwentyOne() {
-        int w = 0;
-
+        int w = 21;
+        while (w < 31)
         // Write a FOR loop that makes 10 iterations, start at 21.
         // calling
         w = w + 1;
