@@ -341,11 +341,12 @@ public class WriteLoops {
     public int tallyVote2() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
-
+        int i = 0;
+        while (i < numberOfVotes) {
+            System.out.println(voteTallies[i]);
             // calling
             w = w + 1;
-            // each time through the inner loop
+        }        // each time through the inner loop
         
         return w;
     }
