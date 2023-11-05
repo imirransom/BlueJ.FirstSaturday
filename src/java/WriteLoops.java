@@ -37,8 +37,8 @@ public class WriteLoops {
     }
 
     public int startAtTwentyOne() {
-        int w = 21;
-        for ( int i = 21; i < 32; i++) {
+        int w = 0;
+        for ( int i = 21; i <= 31; i++) {
             // Write a FOR loop that makes 10 iterations, start at 21.
             // calling
             w = w + 1;
@@ -62,7 +62,7 @@ public class WriteLoops {
     public int byTwoTo32() {
         int w = 0;
 
-        for ( int i = 0; i < 32; i = i + 2) {
+        for ( int i = 0; i < 33; i = i + 2) {
             // Write a FOR loop from 0 to 32 by 2s.
             // calling
             w = w + 1;
@@ -90,7 +90,7 @@ public class WriteLoops {
         // 0 to less than 20 and the inner one counts from 0 to 4
                 // calling
         for ( int i = 0; i < 20; i++) {
-            for (int j = 0; j < 4; j++){
+            for (int j = 0; j <= 4; j++){
                 w = w + 1;
             }
 
@@ -109,11 +109,13 @@ public class WriteLoops {
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
         for ( int i = 5; i < 105; i++) {
-            if (i > 51){
+            if (i > 51) {
                 System.out.println("Hello Zipcode");
+            } else {
+                w = w + 1;
             }
             // calling
-            //w = w + 1;
+            //
             // each time through the inner loop
         }
         return w;
@@ -144,12 +146,12 @@ public class WriteLoops {
         int w = 0;
 
         // you need to use a .equals for two Strings.
-        while (gpsCurrentLocation().equals("Home")) {
+        while (!gpsCurrentLocation().equals("Home")) {
             driveSomeMore();
-        }
+
             // calling
             w = w + 1;
-            // each time through the inner loop
+    }    // each time through the inner loop
         System.out.println("Honey I'm more!");
 
             return w;
@@ -161,7 +163,7 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
 
 
         int w = 0;
@@ -170,13 +172,13 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-        while(runningScore > highestScore){
+        while(runningScore < highestScore){
             runningScore += currentScore;
             // calling
             w = w + 1;
             // each time through the inner loop
     }
-        return w; // >= 3;
+        return w >= 2;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -189,14 +191,16 @@ public class WriteLoops {
 
         // do your while loop here
         do {
+
             runningScore += currentScore;
 
-        } while (runningScore > highestScore);
+        } while (runningScore < highestScore);
+
             // calling
             w = w + 1;
             // each time through the inner loop
 
-        return w >= 3;
+        return w >= 4;
     }
 
     // Write a WHILE loop that checks “serverIsRunning()” and if true
