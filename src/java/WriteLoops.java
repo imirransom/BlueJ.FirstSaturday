@@ -17,7 +17,7 @@ public class WriteLoops {
 
         // Write a FOR loop that counts from 1 to 10.
             // calling
-        for ( int i = 0; i < 6; i++){
+        for ( int i = 0; i < 5; i++){
             w = w + 1;
             // each time through the loop
         }
@@ -27,7 +27,7 @@ public class WriteLoops {
 
     public int oneToTen() {
         int w = 0;
-        for ( int i = 0; i < 11; i++) {
+        for ( int i = 0; i < 10; i++) {
             // Write a FOR loop that counts from 1 to 10.
             // calling
             w = w + 1;
@@ -50,7 +50,7 @@ public class WriteLoops {
     public int countDown() {
         int w = 0;
 
-        for ( int i = 100; i > 0; i = i - 5) {
+        for ( int i = 100; i > 0; i = i - 1) {
             // Write a FOR loop that counts down from 100 to 0.
             // calling
             w = w + 1;
@@ -73,7 +73,7 @@ public class WriteLoops {
     public int countDownFrom5000() {
         int w = 1;
 
-        for ( int i = 1; i < 5001; i = i + 11) {
+        for ( int i = 1; i < 4990; i = i + 11) {
 
             // Write a FOR loop from 1 to less than 5001 by 11s.
             // calling
@@ -108,12 +108,12 @@ public class WriteLoops {
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
-        for ( int i = 5; i < 106; i++) {
+        for ( int i = 5; i < 105; i++) {
             if (i > 51){
                 System.out.println("Hello Zipcode");
             }
             // calling
-            w = w + 1;
+            //w = w + 1;
             // each time through the inner loop
         }
         return w;
