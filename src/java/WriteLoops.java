@@ -138,7 +138,7 @@ public class WriteLoops {
     }
 
     // Write a WHILE loop that checks “gpsCurrentLocation()”
-    // and if that is not equal to “Home” then and it calls “driveSomeMore()”.
+    // and if that is not equal to “Home” then, and it calls “driveSomeMore()”.
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
@@ -162,17 +162,20 @@ public class WriteLoops {
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
     public int checkGameScore() {
+
+
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
 
         // do your while loop here
- 
+        while(runningScore > highestScore){
+            runningScore += currentScore;
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+    }
         return w; // >= 3;
     }
 
@@ -185,7 +188,10 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
+        do {
+            runningScore += currentScore;
 
+        } while (runningScore > highestScore);
             // calling
             w = w + 1;
             // each time through the inner loop
@@ -200,12 +206,16 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
-
-        // calling
-        w = w + 1;
-        // each time through the inner loop
-        
+        while (serverIsRunning()) {
+            waitFor(5);
+            // calling
+            w = w + 1;
+            // each time through the inner loop
+        }
+        if (serverIsRunning() == false){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("Help", "911");
+        }
         return w;
     }
 
@@ -214,12 +224,13 @@ public class WriteLoops {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
-
-
+        int i = 7;
+        while (i < 50) {
+            i += 7;
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         return w;
     }
 
@@ -251,12 +262,13 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
-
- 
+        int i = 0;
+        while (i < threes_array.length) {
+        sumOfThrees += threes_array[i];
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
